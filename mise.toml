@@ -1,0 +1,33 @@
+[tools]
+"node" = "lts"
+"biome" = "2.5.3"
+"dprint" = "0.55.1"
+"npm:vite" = "8"
+
+[tasks.dev]
+description = "Start Vite dev server"
+run = "vite"
+
+[tasks.build]
+description = "Build production site"
+run = "vite build"
+
+[tasks.preview]
+description = "Preview the built site"
+run = "vite preview"
+
+[tasks.fmt]
+description = "Auto-format source files"
+run = "biome check --write . && dprint fmt"
+
+[tasks.fmt-check]
+description = "Check formatting only"
+run = "biome ci . && dprint check"
+
+[tasks.lint]
+description = "Lint source files"
+run = "biome lint ."
+
+[tasks.ci]
+description = "Run all CI checks"
+depends = ["fmt-check", "lint"]
