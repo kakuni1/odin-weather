@@ -17,8 +17,10 @@ export async function fetchWeather() {
 }
 
 function printWeather(data) {
-  const div = document.querySelector(".weather");
-  const day = document.createElement("div");
-  day.textContent = `temp: ${data.days[0].temp}`;
-  div.appendChild(day);
+  const weather = document.querySelector(".weather");
+  for (const day of data.days.slice(0, 5)) {
+    const dayElement = document.createElement("p");
+    dayElement.textContent = `temp: ${day.temp}`;
+    weather.appendChild(dayElement);
+  }
 }
