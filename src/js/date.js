@@ -1,32 +1,32 @@
 export function getYearMonthDay() {
   const date = new Date();
-  const year = date.getUTCFullYear();
-  const month = date.getUTCMonth() + 1;
-  const day = date.getUTCDate();
+  const year = String(date.getUTCFullYear());
+  const month = String(date.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(date.getUTCDate()).padStart(2, "0");
   return `${year}/${month}/${day}`;
 }
 
 export function getMonthDay() {
   const date = new Date();
-  const month = date.getUTCMonth() + 1;
-  const day = date.getUTCDate();
+  const month = String(date.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(date.getUTCDate()).padStart(2, "0");
   return `${month}/${day}`;
 }
 
 export function getYear() {
   const date = new Date();
-  const year = date.getUTCFullYear();
+  const year = String(date.getUTCFullYear());
   return `${year}`;
 }
 
 export function getMonth() {
   const date = new Date();
-  const month = date.getUTCMonth() + 1;
+  const month = String(date.getUTCMonth() + 1).padStart(2, "0");
   return `${month}`;
 }
 
 export function getDay() {
   const date = new Date();
-  const day = date.getUTCDate();
+  const day = String(date.getUTCDate()).padStart(2, "0");
   return `${day}`;
 }
