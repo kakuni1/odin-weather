@@ -1,8 +1,12 @@
 [tools]
 "node" = "lts"
+"npm:vite" = "8"
 "biome" = "2.5.3"
 "dprint" = "0.55.1"
-"npm:vite" = "8"
+
+[tasks.setup]
+description = "Install tools & dependencies"
+run = "mise install && npm install"
 
 [tasks.dev]
 description = "Start Vite dev server"
