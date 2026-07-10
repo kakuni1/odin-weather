@@ -14,7 +14,7 @@ run = "vite"
 
 [tasks.build]
 description = "Build production site"
-run = "vite build"
+run = "vite build --base=./"
 
 [tasks.preview]
 description = "Preview the built site"
