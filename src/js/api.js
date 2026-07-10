@@ -6,6 +6,7 @@ export function weatherUrl(city, key) {
   url.search = new URLSearchParams({
     unitGroup: "metric",
     include: "days",
+    iconSet: "icons2",
     key,
     contentType: "json",
   }).toString();
