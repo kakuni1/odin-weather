@@ -14,6 +14,7 @@ export async function fetchWeather(city, key) {
 
 export function getWeatherCurrent(data) {
   // get today's current weather (temp & icon)
+  // return as an object
   return getWeather(data, 1)[0];
 }
 
