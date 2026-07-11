@@ -23,7 +23,9 @@ function getWeather(data, days) {
   // reduce from 14 days -> set # of days
   // send back with icon name
   return data.days.slice(0, days).map((day) => ({
+    location: data.resolvedAddress,
     temp: Math.round(day.temp),
+    condition: day.conditions,
     icon: day.icon,
   }));
 }

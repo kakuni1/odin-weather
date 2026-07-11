@@ -11,6 +11,12 @@ export function printMainCard(data) {
   const icon = getWeatherIcon(data.icon);
   icon.classList.add("weather-icon");
 
-  div.append(temp, icon);
+  const condition = document.createElement("p");
+  condition.textContent = data.condition;
+
+  const city = document.createElement("p");
+  city.textContent = data.location;
+
+  div.append(temp, icon, condition, city);
   weather.appendChild(div);
 }
