@@ -36,3 +36,13 @@ export function getWeatherIcon(condition) {
   const iconComponent = iconMap[key] ?? Bug;
   return createElement(iconComponent);
 }
+
+export function setFavicon(IconComponent) {
+  const svg = createElement(IconComponent);
+  svg.setAttribute("stroke", "#fafafa");
+  const dataUri = `data:image/svg+xml,${encodeURIComponent(new XMLSerializer().serializeToString(svg))}`;
+  const link = document.createElement("link");
+  link.rel = "icon";
+  link.href = dataUri;
+  document.head.appendChild(link);
+}

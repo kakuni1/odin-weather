@@ -1,5 +1,6 @@
-import { Cloud, createIcons, Sun } from "lucide";
+import { Parasol } from "lucide";
+import { setFavicon } from "./icons.js";
 import { fetchWeather } from "./weather.js";
 
-createIcons({ icons: { Sun, Cloud } });
+setFavicon(Parasol);
 fetchWeather();
