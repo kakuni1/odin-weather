@@ -1,4 +1,5 @@
 import { getWeatherIcon } from "./icons";
+import { capitalize } from "./misc";
 
 export function printMainCard(data) {
   const weather = document.querySelector("#weather");
@@ -15,7 +16,7 @@ export function printMainCard(data) {
   condition.textContent = data.condition;
 
   const city = document.createElement("p");
-  city.textContent = data.location;
+  city.textContent = capitalize(data.location);
 
   div.append(temp, icon, condition, city);
   weather.appendChild(div);
