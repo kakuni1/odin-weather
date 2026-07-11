@@ -37,9 +37,9 @@ export function getWeatherIcon(condition) {
   return createElement(iconComponent);
 }
 
-export function setFavicon(IconComponent) {
+export function setFavicon(IconComponent, stroke) {
   const svg = createElement(IconComponent);
-  svg.setAttribute("stroke", "#fafafa");
+  svg.setAttribute("stroke", stroke);
   const dataUri = `data:image/svg+xml,${encodeURIComponent(new XMLSerializer().serializeToString(svg))}`;
   const link = document.createElement("link");
   link.rel = "icon";
