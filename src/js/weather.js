@@ -1,6 +1,9 @@
 import { weatherUrl } from "./api.js";
 
 export function getWeather(data, days) {
+  // receive weather data from api
+  // reduce from 14 days -> set # of days
+  // send back with icon name
   return data.days.slice(0, days).map((day) => ({
     temp: Math.round(day.temp),
     icon: day.icon,
