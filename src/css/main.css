@@ -42,7 +42,10 @@ main {
 
 h1,
 h2,
-h3,
+h3 {
+  margin-bottom: 1.5rem;
+}
+
 h4,
 h5,
 h6 {
@@ -77,4 +80,8 @@ a:focus-visible {
   to {
     opacity: 1;
   }
+}
+
+.indented {
+  padding-left: 1rem;
 }
