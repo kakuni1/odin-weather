@@ -1,12 +1,9 @@
 import { weatherUrl } from "./api.js";
 import { getWeatherIcon } from "./icons.js";
 
-const CITY = "tokyo";
-const KEY = import.meta.env.VITE_VISUALCROSSING_KEY;
-
-export async function fetchWeather() {
+export async function fetchWeather(city, key) {
   try {
-    const response = await fetch(weatherUrl(CITY, KEY));
+    const response = await fetch(weatherUrl(city, key));
     if (!response.ok)
       throw new Error(`http:${response.status} ${response.statusText}`);
     const data = await response.json();
