@@ -3,6 +3,7 @@ import { getWeatherIcon } from "./icons";
 export function printMainCard(data) {
   const weather = document.querySelector("#weather");
   const div = document.createElement("div");
+  div.id = "main-card";
 
   const temp = document.createElement("p");
   temp.textContent = `${data.temp}°C`;
