@@ -1,5 +1,6 @@
 import { Parasol } from "lucide";
 import { setFavicon } from "./icons.js";
+import { printMainCard } from "./print.js";
 import { fetchWeather, getWeatherCurrent } from "./weather.js";
 
 const city = "tokyo";
@@ -16,6 +17,8 @@ async function main() {
   // get today's current weather (temp & icon)
   const currentData = getWeatherCurrent(weatherData);
   console.log(currentData);
+
+  printMainCard(currentData);
 }
 
 main();
