@@ -1,6 +1,6 @@
 import { Parasol } from "lucide";
 import { setFavicon } from "./icons.js";
-import { fetchWeather, getWeather } from "./weather.js";
+import { fetchWeather, getWeatherCurrent } from "./weather.js";
 
 const city = "tokyo";
 const key = import.meta.env.VITE_VISUALCROSSING_KEY;
@@ -13,9 +13,9 @@ async function main() {
   const weatherData = await fetchWeather(city, key);
   console.log(weatherData);
 
-  // set # of days (weather data)
-  const temp = getWeather(weatherData, 3);
-  console.log(temp);
+  // get today's current weather (temp & icon)
+  const currentData = getWeatherCurrent(weatherData);
+  console.log(currentData);
 }
 
 main();
