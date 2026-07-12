@@ -18,6 +18,10 @@ export function printMainCard(data) {
   const city = document.createElement("p");
   city.textContent = capitalize(data.location);
 
-  div.append(temp, icon, condition, city);
+  const top = document.createElement("div");
+  top.append(temp, icon);
+  top.classList.add("top-row");
+
+  div.append(top, condition, city);
   weather.appendChild(div);
 }

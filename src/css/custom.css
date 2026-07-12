@@ -5,6 +5,20 @@
 }
 
 #weather {
+  display: flex;
   border-radius: 7.5px;
+  padding: 10px 1rem;
   background-color: #1f2430;
+}
+
+#main-card {
+  display: flex;
+  font-size: 0.9rem;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.top-row {
+  display: flex;
+  gap: 10px;
 }
