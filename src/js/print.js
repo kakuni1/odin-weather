@@ -1,3 +1,4 @@
+import { getCityDate, getCityTime } from "./date";
 import { getWeatherIcon } from "./icons";
 import { capitalize } from "./misc";
 
@@ -18,10 +19,16 @@ export function printMainCard(data) {
   const city = document.createElement("p");
   city.textContent = capitalize(data.location);
 
+  const time = document.createElement("p");
+  time.textContent = getCityTime(data.timezone);
+
+  const day = document.createElement("p");
+  day.textContent = getCityDate(data.timezone);
+
   const top = document.createElement("div");
   top.append(temp, icon);
   top.classList.add("top-row");
 
-  div.append(top, condition, city);
+  div.append(top, condition, city, time, day);
   weather.appendChild(div);
 }

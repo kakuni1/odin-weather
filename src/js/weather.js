@@ -24,6 +24,7 @@ function getWeather(data, days) {
   // send back with icon name
   return data.days.slice(0, days).map((day) => ({
     location: data.resolvedAddress,
+    timezone: data.timezone,
     temp: Math.round(day.temp),
     condition: day.conditions,
     icon: day.icon,
