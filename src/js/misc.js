@@ -1,5 +1,10 @@
 export function capitalize(word) {
-  const first = new String(word).slice(0, 1).toUpperCase();
-  const capWord = first + word.slice(1);
-  return capWord;
+  // split word -> seperate array slots
+  // & capitalize first letter and rejoin
+  return new String(word)
+    .split(" ")
+    .map((w) => {
+      return w.slice(0, 1).toUpperCase() + w.slice(1);
+    })
+    .join(" ");
 }
