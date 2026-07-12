@@ -1,0 +1,10 @@
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-card {
+  border-radius: 7.5px;
+  background-color: #1f2430;
+}
