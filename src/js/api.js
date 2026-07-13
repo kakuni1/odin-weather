@@ -12,14 +12,3 @@ export function weatherUrl(city, key) {
   }).toString();
   return url;
 }
-
-export function geoUrl(city) {
-  const url = new URL("https://geocoding-api.open-meteo.com/v1/search");
-  url.search = new URLSearchParams({
-    name: city,
-    count: "1",
-    language: "en",
-    format: "json",
-  }).toString();
-  return url;
-}
