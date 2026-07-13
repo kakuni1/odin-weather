@@ -1,6 +1,6 @@
-import { getCityDate, getCityTime } from "./date";
-import { getWeatherIcon } from "./icons";
-import { capitalize } from "./misc";
+import { getCityDate, getCityTime } from "./date.js";
+import { getWeatherIcon } from "./icons.js";
+import { capitalize } from "./misc.js";
 
 export function printMainCard(data) {
   const weather = document.querySelector("#weather");
