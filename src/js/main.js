@@ -1,7 +1,7 @@
 import { Parasol } from "lucide";
 import { setFavicon } from "./icons.js";
 import { printMainCard } from "./print.js";
-import { fetchWeather, getWeatherCurrent } from "./weather.js";
+import { fetchData, getWeatherCurrent } from "./weather.js";
 
 // generate favicon from icon set & set color
 setFavicon(Parasol, "#fafafa");
@@ -18,7 +18,7 @@ async function setup() {
 
     // uses api to receive weather data
     // returns as an object
-    const weatherData = await fetchWeather(city, key);
+    const weatherData = await fetchData(city, key);
     if (!weatherData) {
       input.classList.add("error");
       return;
@@ -43,7 +43,7 @@ async function init() {
   // initialize default state
   const city = "tokyo";
 
-  const weatherData = await fetchWeather(city, key);
+  const weatherData = await fetchData(city, key);
   console.log(weatherData);
 
   const currentData = getWeatherCurrent(weatherData);
