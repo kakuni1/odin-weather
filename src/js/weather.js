@@ -21,7 +21,7 @@ export function getWeatherCurrent(data) {
 function getWeather(data, days) {
   // receive weather data from api
   // reduce from 14 days -> set # of days
-  // send back with icon name
+  // send back with other data
   return data.days.slice(0, days).map((day) => ({
     location: data.resolvedAddress,
     timezone: data.timezone,
