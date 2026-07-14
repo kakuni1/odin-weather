@@ -5,6 +5,7 @@ import { fetchWeather, getWeatherData } from "./weather.js";
 
 // generate favicon from icon set & set color
 setFavicon(Parasol, "#fafafa");
+printHeader();
 
 const defaultCity = "tokyo";
 const key = import.meta.env.VITE_VISUALCROSSING_KEY;
@@ -25,7 +26,6 @@ async function showWeather(city) {
 }
 
 async function inputSetup() {
-  printHeader();
   const submit = document.querySelector("#form");
   submit.addEventListener("submit", async (e) => {
     e.preventDefault();
