@@ -1,3 +1,4 @@
+import { createElement, Parasol } from "lucide";
 import { getCityDate, getCityTime } from "./date.js";
 import { getWeatherIcon } from "./icons.js";
 import { capitalize } from "./misc.js";
@@ -8,27 +9,32 @@ export function printMainCard(data) {
   div.id = "main-card";
 
   const temp = document.createElement("p");
-  temp.textContent = `${data.temp}°C`;
+  temp.textContent = `${data.temp}°C | `;
 
-  const icon = getWeatherIcon(data.icon);
-  icon.classList.add("weather-icon");
+  const weatherIcon = getWeatherIcon(data.icon);
+  weatherIcon.classList.add("weather-icon");
 
   const condition = document.createElement("p");
   condition.textContent = data.condition;
 
-  const city = document.createElement("p");
-  city.textContent = capitalize(data.location);
+  const cityZone = document.createElement("p");
+  cityZone.textContent = `${capitalize(data.location)} | ${data.timezone.split("/")[0]}`;
 
-  const time = document.createElement("p");
-  time.textContent = getCityTime(data.timezone);
-
-  const day = document.createElement("p");
-  day.textContent = getCityDate(data.timezone);
+  const dateTime = document.createElement("p");
+  dateTime.textContent = `${getCityDate(data.timezone)} | ${getCityTime(data.timezone)}`;
 
   const top = document.createElement("div");
-  top.append(temp, icon);
+  top.append(temp, weatherIcon);
   top.classList.add("top-row");
 
-  div.append(top, condition, city, time, day);
+  div.append(top, condition, cityZone, dateTime);
   weather.appendChild(div);
+}
+
+export function printHeader() {
+  const headerIcon = createElement(Parasol);
+  headerIcon.classList.add("header-icon");
+
+  const header = document.querySelector(".header-h3");
+  header.appendChild(headerIcon);
 }
