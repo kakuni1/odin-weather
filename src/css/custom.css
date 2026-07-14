@@ -22,7 +22,7 @@ header {
   border-radius: 2px;
   outline: none;
   min-width: 250px;
-  font-size: 1.125rem;
+  font-size: 1.075rem;
   background-color: transparent;
   color: var(--color-text);
 }
