@@ -6,7 +6,7 @@ import { capitalize } from "./misc.js";
 export function printMainCard(data) {
   const weather = document.querySelector("#weather");
   const div = document.createElement("div");
-  div.id = "main-card";
+  div.id = "card-current";
 
   const temp = document.createElement("p");
   temp.textContent = `${data.temp}°C | `;

@@ -74,6 +74,10 @@ a:focus-visible {
   padding-left: 2rem;
 }
 
+.space {
+  margin: 0.75rem 0rem;
+}
+
 .error {
   border-color: var(--color-error);
   outline-color: var(--color-error);

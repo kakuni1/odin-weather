@@ -21,7 +21,7 @@ async function showWeather(city) {
   const currentData = getWeatherData(weatherData, 0);
   console.log(currentData);
 
-  const exists = document.querySelector("#main-card");
+  const exists = document.querySelector("#card-current");
   if (exists) exists.remove();
   printMainCard(currentData);
   return true;
