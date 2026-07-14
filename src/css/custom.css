@@ -1,12 +1,30 @@
 header {
+  display: flex;
+  justify-content: space-between;
   background-color: #1f2430;
 }
 
 .header-h3 {
   display: flex;
   align-items: center;
-  gap: 1rem;
   padding: 0.5rem 1rem;
+  gap: 1rem;
+}
+
+#form {
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+#city-input {
+  border: auto;
+  border-radius: 2px;
+  outline: none;
+  min-width: 250px;
+  font-size: 1.125rem;
+  background-color: transparent;
+  color: var(--color-text);
 }
 
 #weather {
