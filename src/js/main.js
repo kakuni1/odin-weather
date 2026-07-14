@@ -22,7 +22,7 @@ async function showWeather(city) {
   return true;
 }
 
-async function setup() {
+async function inputSetup() {
   const submit = document.querySelector("#form");
   submit.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -40,4 +40,4 @@ async function setup() {
 }
 
 showWeather(defaultCity);
-setup();
+inputSetup();

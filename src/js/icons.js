@@ -31,8 +31,8 @@ const iconMap = {
   wind: Wind,
 };
 
-export function getWeatherIcon(condition) {
-  const key = condition;
+export function getIcon(symbol) {
+  const key = symbol;
   const iconComponent = iconMap[key] ?? Bug;
   return createElement(iconComponent);
 }
