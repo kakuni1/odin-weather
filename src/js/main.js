@@ -7,12 +7,14 @@ import { fetchWeather, getWeatherData } from "./weather.js";
 setFavicon(Parasol, "#fafafa");
 printHeader();
 
-const defaultCity = "tokyo";
+// load saved city, default to "tokyo"
+const city = localStorage.getItem("savedCity") ?? "tokyo";
 const key = import.meta.env.VITE_VISUALCROSSING_KEY;
 
 async function showWeather(city) {
   const weatherData = await fetchWeather(city, key);
   if (!weatherData) return false;
+  localStorage.setItem("savedCity", city);
   console.log(weatherData);
 
   // 0 for today
@@ -42,5 +44,5 @@ async function inputSetup() {
   });
 }
 
-showWeather(defaultCity);
+showWeather(city);
 inputSetup();
