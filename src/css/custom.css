@@ -27,7 +27,7 @@ header {
   color: var(--color-text);
 }
 
-#card-current {
+.card {
   display: flex;
   font-size: 0.9rem;
   flex-direction: column;

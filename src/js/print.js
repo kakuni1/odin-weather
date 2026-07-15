@@ -3,8 +3,9 @@ import { getCityDate, getCityTime } from "./date.js";
 import { getWeatherIcon } from "./icons.js";
 import { capitalize } from "./misc.js";
 
-export function printMainCard(data) {
+export function printCurrentCard(data) {
   const weather = document.querySelector("#card-current");
+  weather.innerHTML = "";
 
   const temp = document.createElement("p");
   temp.textContent = `${data.temp}°C | `;
