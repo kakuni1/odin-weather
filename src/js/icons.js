@@ -9,6 +9,8 @@ import {
   Moon,
   Snowflake,
   Sun,
+  Sunrise,
+  Sunset,
   Wind,
 } from "lucide";
 

@@ -38,7 +38,11 @@ header {
   background-color: #1f2430;
 }
 
-.top-row {
+#card-current {
+  margin-bottom: 2.5rem;
+}
+
+.row {
   display: flex;
   gap: 10px;
 }

@@ -1,6 +1,6 @@
 import { Parasol } from "lucide";
 import { setFavicon } from "./icons.js";
-import { printCurrentCard, printHeader } from "./print.js";
+import { printCurrentCard, printHeader, printTodayCard } from "./print.js";
 import { fetchWeather, getWeatherData } from "./weather.js";
 
 // generate favicon from icon set & set color
@@ -22,6 +22,7 @@ async function showWeather(city) {
   console.log(currentData);
 
   printCurrentCard(currentData);
+  printTodayCard(currentData);
   return true;
 }
 

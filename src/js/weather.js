@@ -17,6 +17,12 @@ export function getWeatherData(data, numberOfDays) {
     timezone: data.timezone,
     temp: Math.round(day.temp),
     condition: day.conditions,
+    tempMin: Math.round(day.tempmin),
+    tempMax: Math.round(day.tempmax),
+    cloudcover: day.cloudcover,
+    precip: day.precip,
+    sunrise: day.sunrise,
+    sunset: day.sunset,
     icon: day.icon,
   };
 }
