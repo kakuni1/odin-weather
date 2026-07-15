@@ -22,7 +22,7 @@ async function showWeather(city) {
   console.log(currentData);
 
   const exists = document.querySelector("#card-current");
-  if (exists) exists.remove();
+  if (exists) exists.innerHTML = "";
   printMainCard(currentData);
   return true;
 }

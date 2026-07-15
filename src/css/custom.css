@@ -27,19 +27,15 @@ header {
   color: var(--color-text);
 }
 
-#weather {
-  display: flex;
-  border-radius: 7.5px;
-  padding: 10px 1rem;
-  margin: 5px;
-  background-color: #1f2430;
-}
-
 #card-current {
   display: flex;
   font-size: 0.9rem;
   flex-direction: column;
+  border-radius: 7.5px;
+  padding: 10px 1rem;
+  margin: 5px;
   gap: 15px;
+  background-color: #1f2430;
 }
 
 .top-row {

@@ -4,9 +4,7 @@ import { getWeatherIcon } from "./icons.js";
 import { capitalize } from "./misc.js";
 
 export function printMainCard(data) {
-  const weather = document.querySelector("#weather");
-  const div = document.createElement("div");
-  div.id = "card-current";
+  const weather = document.querySelector("#card-current");
 
   const temp = document.createElement("p");
   temp.textContent = `${data.temp}°C | `;
@@ -27,8 +25,7 @@ export function printMainCard(data) {
   top.append(temp, weatherIcon);
   top.classList.add("top-row");
 
-  div.append(top, condition, cityZone, dateTime);
-  weather.appendChild(div);
+  weather.append(top, condition, cityZone, dateTime);
 }
 
 export function printHeader() {
